@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seni Seviyorum Beray</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #050505;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Arka plandaki Kalp Animasyonu */
+    .heart-background {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background-color: #ff2e63;
+      transform: rotate(-45deg);
+      animation: pulse 1.2s infinite alternate;
+      box-shadow: 0 0 40px #ff2e63, 0 0 80px #ff2e63;
+      z-index: 1;
+    }
+
+    .heart-background::before,
+    .heart-background::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background-color: #ff2e63;
+      border-radius: 50%;
+    }
+
+    .heart-background::before {
+      top: -150px;
+      left: 0;
+    }
+
+    .heart-background::after {
+      left: 150px;
+      top: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: rotate(-45deg) scale(0.9);
+        box-shadow: 0 0 30px #ff2e63;
+      }
+      100% {
+        transform: rotate(-45deg) scale(1.1);
+        box-shadow: 0 0 90px #ff2e63, 0 0 120px #ff2e63;
+      }
+    }
+
+    /* Ön plandaki Yazı */
+    .message-box {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.6);
+      padding: 20px;
+    }
+
+    .message-box h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .message-box p {
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #ffe3e9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="heart-background"></div>
+
+  <div class="message-box">
+    <h1>SENİ SEVİYORUM</h1>
+    <p>BERAY ❤️</p>
+  </div>
+
+</body>
+</html>
